@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="630" viewBox="0 0 750 630">
+<defs>
+  <style>
+    .bg{fill:none}
+    .shell{fill:#1a0e30;stroke:#ff2ec4;stroke-width:1.6}
+    .shell2{fill:#140a24;stroke:#170c28;stroke-width:2}
+    .panel{fill:#22103c;stroke:#331a56;stroke-width:1.5}
+    .dark{fill:#150a26;stroke:#1e1036;stroke-width:1.5}
+    .edge{fill:none;stroke:#ff2ec4;stroke-width:2}
+    .light{fill:#f5eeff}
+    .accent{fill:#ff2ec4}
+    .button{fill:#150a26;stroke:#241240;stroke-width:2}
+  </style>
+  <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="4" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+
+<!-- Razer Wolverine V3 Tournament Edition inspired skeleton -->
+<g id="Controller">
+
+  <!-- detached shoulder / trigger elements, matching the original skeleton layout -->
+  <path class="panel" d="M151 154 C155 105 169 53 194 30 C207 18 223 11 240 10 L246 11
+                           C251 12 253 17 253 25 L248 137 Z"/>
+  <path class="shell2" d="M153 154 C158 105 172 55 196 33 C208 22 222 15 238 14
+                           L245 15 L241 133 Z"/>
+
+  <path class="panel" d="M599 154 C595 105 581 53 556 30 C543 18 527 11 510 10 L504 11
+                           C499 12 497 17 497 25 L502 137 Z"/>
+  <path class="shell2" d="M597 154 C592 105 578 55 554 33 C542 22 528 15 512 14
+                           L505 15 L509 133 Z"/>
+
+  <!-- main outer shell -->
+  <path class="shell" filter="url(#glow)" d="
+    M103 213
+    C110 190 126 175 149 166
+    C181 153 211 142 239 137
+    C251 135 266 145 282 153
+    C294 159 306 162 321 162
+    L429 162
+    C444 162 456 159 468 153
+    C484 145 499 135 511 137
+    C539 142 569 153 601 166
+    C624 175 640 190 647 213
+    C704 369 730 477 724 536
+    C718 594 689 621 655 626
+    C634 629 613 614 596 594
+    L526 516
+    C511 499 493 491 471 491
+    L279 491
+    C257 491 239 499 224 516
+    L154 594
+    C137 614 116 629 95 626
+    C61 621 32 594 26 536
+    C20 477 46 369 103 213 Z"/>
+
+  <!-- upper shoulder facets -->
+  <path class="panel" d="M103 213 C110 190 126 175 149 166 C178 154 207 144 236 138
+                           C249 136 261 142 276 151 L250 196 C235 181 218 175 198 178
+                           L128 197 C117 201 109 207 103 213 Z"/>
+  <path class="panel" d="M647 213 C640 190 624 175 601 166 C572 154 543 144 514 138
+                           C501 136 489 142 474 151 L500 196 C515 181 532 175 552 178
+                           L622 197 C633 201 641 207 647 213 Z"/>
+
+  <!-- central top face -->
+  <path class="panel" d="M276 151 C291 160 305 165 321 165 L429 165
+                           C445 165 459 160 474 151 L501 196
+                           C489 207 479 220 471 235
+                           L279 235 C271 220 261 207 249 196 Z"/>
+
+  <!-- inner face contour -->
+  <path class="edge" opacity=".7" d="M126 244 C154 213 191 198 229 202
+                           C258 205 275 221 286 244"/>
+  <path class="edge" opacity=".7" d="M624 244 C596 213 559 198 521 202
+                           C492 205 475 221 464 244"/>
+
+  <!-- left Hall-effect stick -->
+  <g id="LeftStick">
+    <circle class="button" cx="218" cy="284" r="48"/>
+    <circle class="dark" cx="218" cy="284" r="39"/>
+    <circle class="edge" cx="218" cy="284" r="38"/>
+    <circle fill="#0d0620" cx="218" cy="284" r="27"/>
+    <path class="light" opacity=".22" d="M196 269 C205 255 226 251 241 261 C228 255 210 259 196 269Z"/>
+  </g>
+
+  <!-- right Hall-effect stick -->
+  <g id="RightStick">
+    <circle class="button" cx="437" cy="375" r="48"/>
+    <circle class="dark" cx="437" cy="375" r="39"/>
+    <circle class="edge" cx="437" cy="375" r="38"/>
+    <circle fill="#0d0620" cx="437" cy="375" r="27"/>
+    <path class="light" opacity=".22" d="M415 360 C424 346 445 342 460 352 C447 346 429 350 415 360Z"/>
+  </g>
+
+  <!-- 8-way floating D-pad -->
+  <g id="Dpad">
+    <circle class="dark" cx="279" cy="376" r="57"/>
+    <path fill="#142a5c" stroke="#234488" stroke-width="2"
+      d="M269 332 C275 329 283 329 289 332 L289 365 L322 365
+         C326 371 326 380 322 386 L289 386 L289 419
+         C283 423 275 423 269 419 L269 386 L236 386
+         C232 380 232 371 236 365 L269 365 Z"/>
+    <path fill="#00e5ff" opacity=".45"
+      d="M269 335 L269 365 L239 365 L236 369 L269 369 L269 335Z"/>
+  </g>
+
+  <!-- ABXY cluster -->
+  <g id="ActionButtons">
+    <circle fill="#150a26" stroke="#00e5ff" stroke-width="2.5" filter="url(#glow)" cx="539" cy="271" r="20"/>
+    <circle fill="#150a26" stroke="#ff9f1c" stroke-width="2.5" filter="url(#glow)" cx="582" cy="314" r="20"/>
+    <circle fill="#150a26" stroke="#b388ff" stroke-width="2.5" filter="url(#glow)" cx="539" cy="357" r="20"/>
+    <circle fill="#150a26" stroke="#ff2ec4" stroke-width="2.5" filter="url(#glow)" cx="496" cy="314" r="20"/>
+    <text x="539" y="277" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="15" font-weight="700" fill="#00e5ff">Y</text>
+    <text x="582" y="320" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="15" font-weight="700" fill="#ff9f1c">B</text>
+    <text x="539" y="363" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="15" font-weight="700" fill="#b388ff">A</text>
+    <text x="496" y="320" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="15" font-weight="700" fill="#ff2ec4">X</text>
+  </g>
+
+  <!-- central controls: Xbox, View, Menu, Share/Function -->
+  <g id="CenterControls">
+    <circle class="button" filter="url(#glow)" stroke="#ff2ec4" cx="375" cy="195" r="20"/>
+    <path class="accent" d="M366 187 C369 183 373 182 375 185 L375 198 C371 197 369 194 366 192Z"/>
+    <path class="accent" d="M384 187 C381 183 377 182 375 185 L375 198 C379 197 381 194 384 192Z"/>
+    <circle class="dark" cx="325" cy="238" r="13"/>
+    <circle class="dark" cx="425" cy="238" r="13"/>
+    <rect class="dark" x="357" y="224" width="36" height="28" rx="12"/>
+    <path class="light" opacity=".75" d="M318 235 h14 M421 235 h8 M421 240 h8 M421 245 h8"/>
+    <circle class="accent" cx="375" cy="238" r="3"/>
+  </g>
+
+  <!-- small lower function / headset controls -->
+  <g id="LowerControls">
+    <rect class="button" x="353" y="277" width="44" height="22" rx="11"/>
+    <path class="light" opacity=".7" d="M365 288 h20"/>
+    <circle class="button" cx="375" cy="316" r="11"/>
+    <path class="accent" d="M370 316 h10 M375 311 v10"/>
+  </g>
+
+  <!-- lower ergonomic grip facets -->
+  <path class="panel" d="M82 466 C111 486 139 493 170 485
+                           C190 480 207 467 224 449 L224 516
+                           L154 594 C137 614 116 629 95 626
+                           C61 621 38 596 29 548 C25 527 25 507 28 486
+                           C46 489 64 482 82 466 Z"/>
+  <path class="panel" d="M668 466 C639 486 611 493 580 485
+                           C560 480 543 467 526 449 L526 516
+                           L596 594 C613 614 634 629 655 626
+                           C689 621 712 596 721 548 C725 527 725 507 722 486
+                           C704 489 686 482 668 466 Z"/>
+
+  <!-- subtle lower shell contour -->
+  <path class="edge" opacity=".55" d="M154 594 C181 560 201 531 224 516"/>
+  <path class="edge" opacity=".55" d="M596 594 C569 560 549 531 526 516"/>
+
+  <!-- top bumpers / HyperTriggers (LT/RT) -->
+  <g filter="url(#glow)">
+    <path fill="#150a26" stroke="#00e5ff" stroke-width="2.5" d="M156 172 C166 157 181 149 198 145 L229 138
+                            C239 137 247 141 255 148 L239 179
+                            C225 170 211 167 196 171 L165 181 Z"/>
+    <path fill="#150a26" stroke="#ff2ec4" stroke-width="2.5" d="M594 172 C584 157 569 149 552 145 L521 138
+                            C511 137 503 141 495 148 L511 179
+                            C525 170 539 167 554 171 L585 181 Z"/>
+  </g>
+
+</g>
+</svg>
